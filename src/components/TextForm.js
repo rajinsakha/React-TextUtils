@@ -66,11 +66,11 @@ export default function TextForm(props) {
                     rows="8"
                 ></textarea>
             </div>
-            <button className={`btn btn-${props.btnColor} mx-1`} onClick={handleUpClick}>Convert to Uppercase</button>
-            <button className={`btn btn-${props.btnColor} mx-1`}onClick={handleLowClick}>Convert to Lowercase</button>
-            <button className={`btn btn-${props.btnColor} mx-1`} onClick={handleClear}>Clear Text</button>
-            <button className={`btn btn-${props.btnColor} mx-1`} onClick={copyText}>Copy Text</button>
-            <button className={`btn btn-${props.btnColor} mx-1`} onClick={speak} id="toggle">Speak</button>
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleUpClick}>Convert to Uppercase</button>
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`}onClick={handleLowClick}>Convert to Lowercase</button>
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleClear}>Clear Text</button>
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={copyText}>Copy Text</button>
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={speak} id="toggle">Speak</button>
         </div>
         <div className="container my-3" style={{color:props.mode ==='light'?'black':'white'}}>
             <h1>Your text summary</h1>
