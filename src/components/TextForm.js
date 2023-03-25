@@ -50,6 +50,11 @@ export default function TextForm(props) {
             }
         }
     }
+      
+    const handleExtraSpaces = ()=>{
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "));
+    }
    
     
     const [text, setText] = useState("");
@@ -71,6 +76,7 @@ export default function TextForm(props) {
             <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleClear}>Clear Text</button>
             <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={copyText}>Copy Text</button>
             <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={speak} id="toggle">Speak</button>
+            <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleExtraSpaces} >Remove Extra Spaces</button>
         </div>
         <div className="container my-3" style={{color:props.mode ==='light'?'black':'white'}}>
             <h1>Your text summary</h1>
