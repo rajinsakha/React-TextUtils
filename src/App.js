@@ -3,16 +3,15 @@ import React, { useState } from 'react';
 import './App.css';
 import Alert from './components/Alert';
 import Footer from './components/Footer';
-// import About from './components/About';
+import About from './components/About';
 
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-// import {
-//   BrowserRouter,
-//   Routes,
-//   Route,
-//   Link,
-// } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light'); //Whether dark mode is enabled or not
@@ -53,39 +52,42 @@ function App() {
 
 
   const toggleMode = ()=>{
-    if(mode == 'light'){
+    if(mode === 'light'){
       setMode('dark');
       setTextColor('light');
       document.body.style.backgroundColor = '#042743';
       showAlert("Dark mode has been enabled", "success");
-      document.title = 'TextUtils - Dark Mode';
     }
     else{
       setMode('light');
       setTextColor('dark');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled", "success");
-      document.title = 'TextUtils - Light Mode';
+      
     }
   }
 
   return (
     <>
-    {/* <BrowserRouter> */}
-      <Navbar title='TextUtils'  mode={mode} toggleMode={toggleMode} /*toggleDangerMode = {toggleDangerMode} */ textColor={textColor}/> 
+    <BrowserRouter>
+      <Navbar title='TextUtils'  mode={mode} toggleMode={toggleMode}  textColor={textColor}/> 
       <Alert alert={alert}/>
       <div className="container my-3">
-      {/* <Routes> */}
-          {/* <Route exact path="/" element={<TextForm heading="Enter the text to analyze below" mode={mode} showAlert={showAlert} btnColor={btnColor} /> }/> */}
+      <Routes>
+        
+          <Route exact path="/about" element={<About mode={mode}/>}/>
 
-          <TextForm heading="Enter the text to analyze below" mode={mode} showAlert={showAlert} btnColor={btnColor} /> 
 
-          {/* <Route exact path="/about" element={<About/>}/> */}
+          <Route exact path="/" element={<TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces" mode={mode} showAlert={showAlert} btnColor={btnColor} /> }/>
+
+        
+
           
-        {/* </Routes> */}
+          
+        </Routes>
        
       </div>
-      {/* </BrowserRouter> */}
+      </BrowserRouter>
       <Footer mode={mode}/>
      </>
   );
