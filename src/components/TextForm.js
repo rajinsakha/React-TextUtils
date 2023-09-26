@@ -51,11 +51,8 @@ export default function TextForm(props) {
             }
         }
     }
-<<<<<<< HEAD
 
-=======
       
->>>>>>> d8bc149ac180b9b01dc3b7beeaade1f3b2ca0d51
     const handleExtraSpaces = ()=>{
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
@@ -76,21 +73,12 @@ export default function TextForm(props) {
                     rows="8"
                 ></textarea>
             </div>
-<<<<<<< HEAD
-            <button disabled={text.length===0} className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleUpClick}>Convert to Uppercase</button>
-            <button disabled={text.length===0} className={`btn btn-${props.btnColor} mx-1 my-1`}onClick={handleLowClick}>Convert to Lowercase</button>
-            <button disabled={text.length===0} className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleClear}>Clear Text</button>
-            <button disabled={text.length===0} className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={copyText}>Copy Text</button>
-            <button disabled={text.length===0} className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={speak} id="toggle">Speak</button>
-            <button disabled={text.length===0} className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleExtraSpaces} >Remove Extra Spaces</button>
-=======
             <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleUpClick}>Convert to Uppercase</button>
             <button className={`btn btn-${props.btnColor} mx-1 my-1`}onClick={handleLowClick}>Convert to Lowercase</button>
             <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleClear}>Clear Text</button>
             <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={copyText}>Copy Text</button>
             <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={speak} id="toggle">Speak</button>
             <button className={`btn btn-${props.btnColor} mx-1 my-1`} onClick={handleExtraSpaces} >Remove Extra Spaces</button>
->>>>>>> d8bc149ac180b9b01dc3b7beeaade1f3b2ca0d51
         </div>
         <div className="container my-3" style={{color:props.mode ==='light'?'black':'white'}}>
             <h1>Your text summary</h1>

@@ -78,7 +78,7 @@ function App() {
           <Route exact path="/about" element={<About mode={mode}/>}/>
 
 
-          <Route exact path="/" element={<TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces" mode={mode} showAlert={showAlert} btnColor={btnColor} /> }/>
+          <Route exact path="/React-TextUtils" element={<TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces" mode={mode} showAlert={showAlert} btnColor={btnColor} /> }/>
 
         
 
